@@ -27,12 +27,65 @@
         content="index, follow"
     >
 
+    <!-- Canonical -->
+
+    <link
+        rel="canonical"
+        href="https://omarliooo221-jpg.github.io/my-wep-site/"
+    >
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="ELZALAT | Premium Essentials"
+    >
+
+    <meta
+        property="og:description"
+        content="ELZALAT — premium essentials designed with simplicity, comfort and confidence in mind."
+    >
+
+    <meta
+        property="og:url"
+        content="https://omarliooo221-jpg.github.io/my-wep-site/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="ELZALAT"
+    >
+
+    <!-- =====================================================
+         STRUCTURED DATA / JSON-LD
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ELZALAT",
+        "url": "https://omarliooo221-jpg.github.io/my-wep-site/",
+        "description": "ELZALAT — premium essentials designed with simplicity, comfort and confidence in mind.",
+        "brand": {
+            "@type": "Brand",
+            "name": "ELZALAT"
+        }
+    }
+    </script>
+
     <link
         rel="stylesheet"
         href="style.css"
     >
 
     <style>
+
         .contact-section {
             padding: 120px 7%;
             background: var(--theme-surface, #111);
@@ -115,6 +168,7 @@
         }
 
         @media (max-width: 760px) {
+
             .contact-section {
                 padding: 85px 6%;
             }
@@ -126,14 +180,14 @@
             .contact-card {
                 min-height: 155px;
             }
+
         }
+
     </style>
 
 </head>
 
-
 <body id="store-body">
-
 
     <!-- =====================================================
          NAVIGATION
@@ -163,7 +217,6 @@
 
         </div>
 
-
         <div class="nav-links">
 
             <a href="#">
@@ -183,7 +236,6 @@
             </a>
 
         </div>
-
 
         <button
             class="cart"
@@ -208,23 +260,17 @@
                 PREMIUM ESSENTIALS
             </p>
 
-
             <h1>
-
                 Built for<br>
-
                 <span>
                     Confidence.
                 </span>
-
             </h1>
-
 
             <p class="description store-description">
                 Premium essentials designed with simplicity,
                 comfort and confidence in mind.
             </p>
-
 
             <a
                 href="#shop"
@@ -294,7 +340,6 @@
                     ⌕
                 </span>
 
-
                 <input
                     type="search"
                     id="product-search"
@@ -302,7 +347,6 @@
                     autocomplete="off"
                     aria-label="Search products"
                 >
-
 
                 <button
                     type="button"
@@ -314,7 +358,6 @@
                 </button>
 
             </div>
-
 
             <p
                 id="search-results-info"
@@ -640,22 +683,16 @@
             NOIR
         </h2>
 
-
         <p class="store-description">
             Premium essentials.
         </p>
 
-
         <p>
-
             © 2026
-
             <span class="store-name">
                 NOIR
             </span>.
-
             All rights reserved.
-
         </p>
 
     </footer>
@@ -757,13 +794,10 @@
                     <div class="checkout-field">
 
                         <label for="checkout-email">
-
                             Email
-
                             <span>
                                 Optional
                             </span>
-
                         </label>
 
                         <input
@@ -798,13 +832,10 @@
                     <div class="checkout-field">
 
                         <label for="checkout-notes">
-
                             Order Notes
-
                             <span>
                                 Optional
                             </span>
-
                         </label>
 
                         <textarea
@@ -882,12 +913,9 @@
         src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
     ></script>
 
-
     <script src="supabase.js"></script>
 
-
     <script src="script.js"></script>
-
 
 </body>
 
