@@ -1,0 +1,1247 @@
+/* =========================================================
+   ELZALAT ADMIN PANEL
+   PREMIUM BLACK / GOLD DESIGN
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #080808;
+    --black-soft: #111111;
+    --black-light: #181818;
+
+    --gold: #c9a227;
+    --gold-light: #e0c45a;
+    --gold-dark: #9e7b12;
+
+    --white: #ffffff;
+    --text: #171717;
+    --muted: #858585;
+    --border: #e7e7e7;
+
+    --bg: #f6f6f4;
+
+    --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.045);
+    --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.07);
+
+    --radius: 16px;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(201, 162, 39, 0.035), transparent 28%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b0b0b 0%,
+            #111111 55%,
+            #080808 100%
+        );
+
+    color: white;
+
+    padding: 32px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 10;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin: 0 8px 48px;
+
+    color: #ffffff;
+}
+
+.logo span {
+    display: block;
+
+    font-size: 9px;
+    letter-spacing: 2.5px;
+
+    color: var(--gold);
+
+    margin-top: 7px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    position: relative;
+
+    border: 1px solid transparent;
+
+    background: transparent;
+
+    color: #999;
+
+    text-align: left;
+
+    padding: 13px 15px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-item span {
+    margin-right: 10px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.045);
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+.nav-item.active {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(201, 162, 39, 0.18),
+            rgba(201, 162, 39, 0.055)
+        );
+
+    color: #ffffff;
+
+    border-color: rgba(201, 162, 39, 0.18);
+}
+
+.nav-item.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 3px;
+    height: 24px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.logout-btn {
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: #999;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.logout-btn:hover {
+    background: rgba(201, 162, 39, 0.09);
+
+    border-color: rgba(201, 162, 39, 0.3);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 38px 48px 60px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.topbar h1 {
+    font-size: 30px;
+
+    margin-bottom: 7px;
+
+    letter-spacing: -0.5px;
+}
+
+.topbar p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ADMIN USER
+========================================================= */
+
+.admin-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 7px 10px 7px 7px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #050505
+        );
+
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    border: 1px solid rgba(201, 162, 39, 0.25);
+}
+
+.admin-user strong {
+    display: block;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+}
+
+.admin-user small {
+    color: #888;
+
+    font-size: 10px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-card {
+    max-width: 430px;
+
+    margin: 80px auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafafa
+        );
+
+    padding: 42px;
+
+    border-radius: 20px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.09),
+        0 2px 8px rgba(0, 0, 0, 0.03);
+
+    text-align: center;
+}
+
+.login-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #191919,
+            #050505
+        );
+
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    border: 1px solid rgba(201, 162, 39, 0.25);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+}
+
+.login-card h2 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+}
+
+.login-card > p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-bottom: 28px;
+}
+
+.login-card input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #dedede;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: #fafafa;
+
+    transition: 0.2s;
+}
+
+.login-card input:focus {
+    border-color: var(--gold);
+
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.08);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-btn {
+    border: 1px solid #171717;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #080808
+        );
+
+    color: white;
+
+    padding: 12px 19px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #242424,
+            #111111
+        );
+
+    border-color: var(--gold);
+
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    border: 1px solid #dedede;
+
+    background: #ffffff;
+
+    color: #333;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #faf8f0;
+
+    border-color: rgba(201, 162, 39, 0.45);
+
+    color: #8b6d12;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fbfbfb
+        );
+
+    border-radius: var(--radius);
+
+    padding: 25px 26px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border 0.25s ease;
+}
+
+.stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -35px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201, 162, 39, 0.12);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(201, 162, 39, 0.2);
+
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card span {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+.stat-card strong {
+    font-size: 29px;
+
+    letter-spacing: -0.5px;
+}
+
+.status-online {
+    color: #198754;
+
+    font-size: 18px !important;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+    letter-spacing: -0.3px;
+}
+
+.section-header p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fcfcfc
+        );
+
+    border-radius: var(--radius);
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.form-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.form-header h2 {
+    font-size: 20px;
+}
+
+.close-btn {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #eeeeee;
+
+    background: #fafafa;
+
+    border-radius: 9px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: #777;
+
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #111;
+
+    color: #fff;
+
+    border-color: #111;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid #dedede;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: #fafafa;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--gold);
+
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.07);
+}
+
+.form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.save-btn {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products-section {
+    margin-top: 20px;
+}
+
+.products-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(260px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(201, 162, 39, 0.2);
+
+    box-shadow: var(--shadow-md);
+}
+
+.product-card-image {
+    width: 100%;
+
+    height: 220px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeeeee,
+            #f8f8f8
+        );
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.product-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 65%,
+            rgba(0, 0, 0, 0.08)
+        );
+
+    pointer-events: none;
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.04);
+}
+
+.product-card-content {
+    padding: 19px;
+}
+
+.product-card-content h3 {
+    font-size: 17px;
+
+    margin-bottom: 9px;
+
+    line-height: 1.3;
+}
+
+.product-price {
+    font-weight: bold;
+
+    color: #9c7810;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+}
+
+.product-description {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    min-height: 40px;
+
+    margin-bottom: 16px;
+}
+
+.product-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.edit-btn {
+    border: 1px solid #dddddd;
+
+    background: white;
+
+    color: #333;
+}
+
+.delete-btn {
+    border: 1px solid #111;
+
+    background: #111;
+
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #faf8ef;
+
+    border-color: rgba(201, 162, 39, 0.45);
+
+    color: #80630c;
+}
+
+.delete-btn:hover {
+    background: #2a2a2a;
+
+    border-color: #2a2a2a;
+}
+
+
+/* =========================================================
+   CHANGE IMAGE
+========================================================= */
+
+.image-change-card {
+    display: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafafa
+        );
+
+    border-radius: var(--radius);
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    border: 1px solid #e5e5e5;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.image-change-card h3 {
+    margin-bottom: 5px;
+}
+
+.image-change-card p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CREATOR BRANDING
+========================================================= */
+
+.creator-credit {
+    margin-bottom: 18px;
+
+    padding: 14px 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.creator-credit span {
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.7px;
+
+    color: #666;
+}
+
+.creator-credit strong {
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+.creator-credit small {
+    font-size: 9px;
+
+    color: #666;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   ELZALAT BRANDING
+========================================================= */
+
+.logo {
+    letter-spacing: 3px;
+}
+
+.logo span {
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PAGE SECTIONS
+========================================================= */
+
+.settings-section {
+    display: none;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+    background: rgba(201, 162, 39, 0.25);
+
+    color: #111;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        margin-left: 220px;
+
+        padding: 30px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 20px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        flex-direction: row;
+
+        overflow-x: auto;
+
+        padding-bottom: 3px;
+    }
+
+    .nav-item {
+        flex: 1;
+
+        min-width: max-content;
+
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+    .nav-item.active::before {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+
+        padding: 22px 18px 40px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 18px;
+
+        flex-direction: column;
+
+        margin-bottom: 25px;
+    }
+
+    .topbar h1 {
+        font-size: 26px;
+    }
+
+    .admin-user {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .products-list {
+        grid-template-columns: 1fr;
+    }
+
+    .image-change-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .login-card {
+        margin: 40px 18px;
+
+        padding: 30px 22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .main {
+        padding: 18px 14px 35px;
+    }
+
+    .nav-item {
+        padding: 11px 10px;
+
+        font-size: 12px;
+    }
+
+    .product-card-image {
+        height: 200px;
+    }
+
+    .stat-card {
+        padding: 21px;
+    }
+
+    .stat-card strong {
+        font-size: 25px;
+    }
+}
